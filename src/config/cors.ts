@@ -15,7 +15,7 @@ export const corsConfig: CorsOptions = {
         callback(null, true);
       } else {
         callback(
-          new Error("Error de CORS")
+          new Error(`Error de CORS, ${process.env.FRONTEND_URL}, ${origin}`)
         );
       }
     }
